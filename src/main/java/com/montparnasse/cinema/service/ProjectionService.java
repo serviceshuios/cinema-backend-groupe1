@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class ProjectionService {
 	
 	@Autowired
-	private ProjectionDao dao;
+	private ProjectionDAO dao;
 	
 	public Projection add(Projection e)
 	{

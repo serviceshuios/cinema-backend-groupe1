@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class PlaceService {
 	
 	@Autowired
-	private PlaceDao dao;
+	private PlaceDAO dao;
 	
 	public Place add(Place e)
 	{

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class TicketService {
 	
 	@Autowired
-	private TicketDao dao;
+	private TicketDAO dao;
 	
 	public Ticket add(Ticket e)
 	{

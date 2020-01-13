@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class VilleService {
 	
 	@Autowired
-	private VilleDao dao;
+	private VilleDAO dao;
 	
 	public Ville add(Ville v)
 	{
