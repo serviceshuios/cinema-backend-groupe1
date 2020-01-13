@@ -12,11 +12,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.montparnasse.cinema.domaine.Place;
 import com.montparnasse.cinema.domaine.ProjectionFilm;
-import com.montparnasse.cinema.service.PlaceService;
 import com.montparnasse.cinema.service.ProjectionFilmService;
-import com.montparnasse.cinema.service.ProjectionService;
 
 @CrossOrigin("*")
 @RestController
