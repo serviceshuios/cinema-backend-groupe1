@@ -25,8 +25,8 @@ public class Place implements Serializable {
 	private double latitude;
 	private double altitude;
 	
-	@OneToMany(mappedBy = "place",cascade = CascadeType.ALL)
-	private List<Ticket> listTicket;
+	@ManyToOne
+	private Ticket ticket;
 	
 	@ManyToOne
 	private Salle salle;
