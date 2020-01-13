@@ -26,10 +26,7 @@ public class Salle {
 	private int nombrePlaces;
 	
 	@ManyToMany(cascade=CascadeType.ALL)
-	@JoinTable(name="film_assoc_salle",
-	joinColumns= @JoinColumn(name="FILM_ID"),
-	inverseJoinColumns=@JoinColumn(name="SALLE_ID")
-	)
+	@JoinTable(name="film_assoc_salle",joinColumns= @JoinColumn(name="FILM_ID"),inverseJoinColumns=@JoinColumn(name="SALLE_ID"))
 	private List<Film> listeFilms;
 	
 	@ManyToOne
@@ -39,13 +36,12 @@ public class Salle {
 	private List<Place> listPlace;
 
 	/*-----------constructeurs-------------------*/
+	
 	public Salle() {
-		
 	}// fin ctor vide
 
 
 	public Salle(String name, int nombrePlaces) {
-		super();
 		this.name = name;
 		this.nombrePlaces = nombrePlaces;
 	}// fin ctor chargé
