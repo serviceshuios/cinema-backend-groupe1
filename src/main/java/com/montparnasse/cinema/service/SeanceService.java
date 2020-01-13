@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class SeanceService {
 	
 	@Autowired
-	private SeanceDao dao;
+	private SeanceDAO dao;
 	
 	public Seance add(Seance e)
 	{

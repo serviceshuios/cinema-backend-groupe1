@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class FilmService {
 	
 	@Autowired
-	private FilmDao dao;
+	private FilmDAO dao;
 	
 	public Film add(Film e)
 	{

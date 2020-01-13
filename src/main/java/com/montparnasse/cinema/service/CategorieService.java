@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class CategorieService {
 	
 	@Autowired
-	private CategorieDao dao;
+	private CategorieDAO dao;
 	
 	public Categorie add(Categorie e)
 	{

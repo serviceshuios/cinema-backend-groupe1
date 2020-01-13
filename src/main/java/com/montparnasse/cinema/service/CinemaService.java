@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class CinemaService {
 	
 	@Autowired
-	private CinemaDao dao;
+	private CinemaDAO dao;
 	
 	public Cinema add(Cinema e)
 	{
