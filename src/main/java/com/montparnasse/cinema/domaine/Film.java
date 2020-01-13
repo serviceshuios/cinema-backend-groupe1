@@ -1,10 +1,13 @@
 package com.montparnasse.cinema.domaine;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 
 import org.springframework.data.annotation.Id;
 
@@ -21,7 +24,13 @@ public class Film {
 	private String description;
 	private String photo;
 	private Date dateSortie;
-
+	
+	@ManyToOne
+	private Categorie categorie;
+	
+	@ManyToMany(mappedBy="listeSalles")
+	private List<Film> listeFilms;
+	
 	/*--------------constructeurs------------------*/
 	public Film() {
 		

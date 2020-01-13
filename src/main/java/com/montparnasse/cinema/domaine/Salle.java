@@ -1,10 +1,19 @@
 package com.montparnasse.cinema.domaine;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 import org.springframework.data.annotation.Id;
+
 
 @Entity
 public class Salle {
@@ -15,8 +24,19 @@ public class Salle {
 	private Long id;
 	private String name;
 	private int nombrePlaces;
-
 	
+	@ManyToMany(cascade=CascadeType.ALL)
+	@JoinTable(name="film_assoc_salle",
+	joinColumns= @JoinColumn(name="FILM_ID"),
+	inverseJoinColumns=@JoinColumn(name="SALLE_ID")
+	)
+	
+	@ManyToOne
+	private Cinema cinema;
+	
+	@OneToMany(mappedBy = "salle",cascade = CascadeType.ALL)
+	private List<Place> listPlace;
+
 	/*-----------constructeurs-------------------*/
 	public Salle() {
 		

@@ -2,9 +2,11 @@ package com.montparnasse.cinema.domaine;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.OneToOne;
 
 import org.springframework.data.annotation.Id;
 
@@ -16,6 +18,9 @@ public class Seance {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private Date heureDebut;
+	
+	@OneToOne(mappedBy="seance", cascade=CascadeType.ALL)
+	private ProjectionFilm projectionFilm;
 
 	
 	/*--------------constructeurs------------------*/

@@ -1,10 +1,15 @@
 package com.montparnasse.cinema.domaine;
 
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 import org.springframework.data.annotation.Id;
 
@@ -17,6 +22,14 @@ public class ProjectionFilm {
 	private Long id;
 	private Date dateProjection;
 	private double prix;
+	
+	@OneToMany(mappedBy = "projectionFilm",cascade = CascadeType.ALL)
+	private List<Ticket> listTicket;
+	
+	@OneToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="SEANCE_ID", referencedColumnName="idSeance")// nom de la colonne de la classe
+	private Seance seance;
+	
 	
 
 	/*--------------constructeurs------------------*/
