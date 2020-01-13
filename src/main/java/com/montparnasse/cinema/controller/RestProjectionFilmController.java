@@ -16,7 +16,6 @@ import com.montparnasse.cinema.domaine.Place;
 import com.montparnasse.cinema.domaine.ProjectionFilm;
 import com.montparnasse.cinema.service.PlaceService;
 import com.montparnasse.cinema.service.ProjectionFilmService;
-import com.montparnasse.cinema.service.ProjectionService;
 
 @CrossOrigin("*")
 @RestController
