@@ -8,11 +8,10 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.JoinColumn;
+import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
-import org.springframework.data.annotation.Id;
 
 @Entity
 public class ProjectionFilm implements Serializable {
@@ -28,7 +27,6 @@ public class ProjectionFilm implements Serializable {
 	private List<Ticket> listTicket;
 	
 	@OneToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="SEANCE_ID", referencedColumnName="idSeance")// nom de la colonne de la classe
 	private Seance seance;
 	
 	

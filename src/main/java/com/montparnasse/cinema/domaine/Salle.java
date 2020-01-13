@@ -1,6 +1,7 @@
 package com.montparnasse.cinema.domaine;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -26,9 +27,8 @@ public class Salle implements Serializable{
 	private String name;
 	private int nombrePlaces;
 	
-	@ManyToMany(mappedBy = "listeSalle", cascade=CascadeType.ALL)
-	@JoinTable(name="film_assoc_salle",joinColumns= @JoinColumn(name="FILM_ID"),inverseJoinColumns=@JoinColumn(name="SALLE_ID"))
-	private List<Film> listeFilms;
+	@OneToMany(mappedBy="id.salle")
+	private List<SalleFilm> salleFilm = new ArrayList<SalleFilm>();
 	
 	@ManyToOne
 	private Cinema cinema;

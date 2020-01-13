@@ -7,10 +7,10 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-import org.springframework.data.annotation.Id;
 
 @Entity
 public class Cinema implements Serializable {
@@ -27,9 +27,6 @@ public class Cinema implements Serializable {
 	
 	@ManyToOne
 	private Ville ville;
-	
-	@OneToMany(mappedBy = "cinema",cascade = CascadeType.ALL)
-	private List<Ville> listVille;
 	
 	@OneToMany(mappedBy = "cinema",cascade = CascadeType.ALL)
 	private List<Salle> listeSalle;
