@@ -5,6 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.montparnasse.cinema.dao.CinemaDAO;
+import com.montparnasse.cinema.domaine.Cinema;
+
 
 @Service
 public class CinemaService {
@@ -12,14 +15,14 @@ public class CinemaService {
 	@Autowired
 	private CinemaDAO dao;
 	
-	public Cinema add(Cinema e)
+	public Cinema add(Cinema ci)
 	{
-		return dao.save(e);
+		return dao.save(ci);
 	}
 	
-	public Cinema update(Cinema e)
+	public Cinema update(Cinema ci)
 	{
-		return dao.save(e);
+		return dao.save(ci);
 	}
 	
 	public boolean delete(Long id)

@@ -5,6 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.montparnasse.cinema.dao.SeanceDAO;
+import com.montparnasse.cinema.domaine.Seance;
+
 
 @Service
 public class SeanceService {
@@ -12,14 +15,14 @@ public class SeanceService {
 	@Autowired
 	private SeanceDAO dao;
 	
-	public Seance add(Seance e)
+	public Seance add(Seance se)
 	{
-		return dao.save(e);
+		return dao.save(se);
 	}
 	
-	public Seance update(Seance e)
+	public Seance update(Seance se)
 	{
-		return dao.save(e);
+		return dao.save(se);
 	}
 	
 	public boolean delete(Long id)

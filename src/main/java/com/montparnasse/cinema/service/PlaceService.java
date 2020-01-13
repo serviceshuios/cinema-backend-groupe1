@@ -5,6 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.montparnasse.cinema.dao.PlaceDAO;
+import com.montparnasse.cinema.domaine.Place;
+
 
 @Service
 public class PlaceService {
@@ -12,14 +15,14 @@ public class PlaceService {
 	@Autowired
 	private PlaceDAO dao;
 	
-	public Place add(Place e)
+	public Place add(Place pl)
 	{
-		return dao.save(e);
+		return dao.save(pl);
 	}
 	
-	public Place update(Place e)
+	public Place update(Place pl)
 	{
-		return dao.save(e);
+		return dao.save(pl);
 	}
 	
 	public boolean delete(Long id)
