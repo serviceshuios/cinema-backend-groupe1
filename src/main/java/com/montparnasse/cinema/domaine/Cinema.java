@@ -30,6 +30,9 @@ public class Cinema {
 	@OneToMany(mappedBy = "cinema",cascade = CascadeType.ALL)
 	private List<Ville> listVille;
 	
+	@OneToMany(mappedBy = "cinema",cascade = CascadeType.ALL)
+	private List<Salle> listeSalle;
+	
 	
 	/*-----------constructeurs-------------------*/
 public Cinema() {
