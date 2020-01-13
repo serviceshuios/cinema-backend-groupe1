@@ -7,22 +7,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.montparnasse.cinema.dao.ProjectionDAO;
+import com.montparnasse.cinema.dao.ProjectionFilmDAO;
+import com.montparnasse.cinema.domaine.ProjectionFilm;
 
 
 @Service
-public class ProjectionService {
+public class ProjectionFilmService {
 	
 	@Autowired
-	private ProjectionDAO dao;
+	private ProjectionFilmDAO dao;
 	
-	public Projection add(Projection e)
+	public ProjectionFilm add(ProjectionFilm pf)
 	{
-		return dao.save(e);
+		return dao.save(pf);
 	}
 	
-	public Projection update(Projection e)
+	public ProjectionFilm update(ProjectionFilm pf)
 	{
-		return dao.save(e);
+		return dao.save(pf);
 	}
 	
 	public boolean delete(Long id)
@@ -31,12 +33,12 @@ public class ProjectionService {
 		return true;
 	}
 	
-	public Projection get(Long id)
+	public ProjectionFilm get(Long id)
 	{
 		return dao.findById(id).get();
 	}
 	
-	public List<Projection> getAll()
+	public List<ProjectionFilm> getAll()
 	{
 		return dao.findAll();
 	}

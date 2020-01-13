@@ -15,14 +15,14 @@ public class SalleService {
 	@Autowired
 	private SalleDAO dao;
 	
-	public Salle add(Salle e)
+	public Salle add(Salle s)
 	{
-		return dao.save(e);
+		return dao.save(s);
 	}
 	
-	public Salle update(Salle e)
+	public Salle update(Salle s)
 	{
-		return dao.save(e);
+		return dao.save(s);
 	}
 	
 	public boolean delete(Long id)

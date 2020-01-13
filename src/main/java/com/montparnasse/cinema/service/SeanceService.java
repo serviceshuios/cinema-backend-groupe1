@@ -15,14 +15,14 @@ public class SeanceService {
 	@Autowired
 	private SeanceDAO dao;
 	
-	public Seance add(Seance e)
+	public Seance add(Seance se)
 	{
-		return dao.save(e);
+		return dao.save(se);
 	}
 	
-	public Seance update(Seance e)
+	public Seance update(Seance se)
 	{
-		return dao.save(e);
+		return dao.save(se);
 	}
 	
 	public boolean delete(Long id)

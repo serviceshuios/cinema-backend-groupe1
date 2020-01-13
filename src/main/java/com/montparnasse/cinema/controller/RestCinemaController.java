@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.montparnasse.cinema.domaine.Categorie;
+
 import com.montparnasse.cinema.domaine.Cinema;
-import com.montparnasse.cinema.service.CategorieService;
+
 import com.montparnasse.cinema.service.CinemaService;
 
 @CrossOrigin("*")
