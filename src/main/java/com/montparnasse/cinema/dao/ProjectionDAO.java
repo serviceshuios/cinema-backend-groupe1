@@ -5,7 +5,9 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-public interface InterfaceCategorieDAO  extends JpaRepository<Categorie, Long>{
-	 
-
+@Component
+@Repository
+@Transactional
+public interface ProjectionDAO  extends JpaRepository<Projection, Long>{
+	
 }

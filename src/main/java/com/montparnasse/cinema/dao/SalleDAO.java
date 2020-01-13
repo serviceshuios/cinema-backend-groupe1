@@ -5,12 +5,10 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-
-
 @Component
 @Repository
 @Transactional
-public interface InterfaceVilleDAO extends JpaRepository<Ville, Long>{
+public interface SalleDAO  extends JpaRepository<Salle, Long>{
+	 
 
-	
-	
+}
