@@ -5,6 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.montparnasse.cinema.dao.CategorieDAO;
+import com.montparnasse.cinema.domaine.Categorie;
+
 
 @Service
 public class CategorieService {
