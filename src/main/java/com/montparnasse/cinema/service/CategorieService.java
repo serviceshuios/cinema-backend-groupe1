@@ -5,6 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.montparnasse.cinema.dao.CategorieDAO;
+import com.montparnasse.cinema.domaine.Categorie;
+
 
 @Service
 public class CategorieService {
@@ -12,14 +15,14 @@ public class CategorieService {
 	@Autowired
 	private CategorieDAO dao;
 	
-	public Categorie add(Categorie e)
+	public Categorie add(Categorie ca)
 	{
-		return dao.save(e);
+		return dao.save(ca);
 	}
 	
-	public Categorie update(Categorie e)
+	public Categorie update(Categorie ca)
 	{
-		return dao.save(e);
+		return dao.save(ca);
 	}
 	
 	public boolean delete(Long id)
