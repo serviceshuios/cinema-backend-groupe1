@@ -1,5 +1,6 @@
 package com.montparnasse.cinema.domaine;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.CascadeType;
@@ -11,7 +12,7 @@ import javax.persistence.OneToOne;
 import org.springframework.data.annotation.Id;
 
 @Entity
-public class Seance {
+public class Seance implements Serializable {
 	
 	/*-----attributs-------------*/
 	@Id
