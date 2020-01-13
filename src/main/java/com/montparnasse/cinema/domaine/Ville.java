@@ -1,8 +1,12 @@
 package com.montparnasse.cinema.domaine;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.OneToMany;
 
 import org.springframework.data.annotation.Id;
 
@@ -17,8 +21,10 @@ public class Ville {
 	private double longitude;
 	private double latitude;
 	private double altitude;
-
 	
+	@OneToMany(mappedBy = "ville",cascade = CascadeType.ALL)
+	private List<Cinema> listCinema;
+
 	/*-----------constructeurs-------------------*/
 	public Ville() {
 		

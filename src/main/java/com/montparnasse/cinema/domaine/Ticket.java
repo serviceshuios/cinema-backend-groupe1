@@ -3,6 +3,7 @@ package com.montparnasse.cinema.domaine;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.ManyToOne;
 
 import org.springframework.data.annotation.Id;
 
@@ -17,6 +18,12 @@ public class Ticket {
 	private double prix;
 	private int codePayement;
 	private boolean reservee;
+	
+	@ManyToOne
+	private Place place;
+	
+	@ManyToOne
+	private ProjectionFilm projectionFilm;
 	
 	
 	/*--------------constructeurs------------------*/

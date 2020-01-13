@@ -2,7 +2,6 @@ package com.montparnasse.cinema.service;
 
 import java.util.List;
 
-import org.hibernate.criterion.Projection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

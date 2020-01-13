@@ -1,8 +1,12 @@
 package com.montparnasse.cinema.domaine;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.OneToMany;
 
 import org.springframework.data.annotation.Id;
 
@@ -14,6 +18,9 @@ public class Categorie {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
+	
+	@OneToMany(mappedBy = "categorie",cascade = CascadeType.ALL)
+	private List<Film> listFilm;
 	
 
 	/*----------constructeurs-----------*/
