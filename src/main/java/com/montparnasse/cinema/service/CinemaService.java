@@ -15,14 +15,14 @@ public class CinemaService {
 	@Autowired
 	private CinemaDAO dao;
 	
-	public Cinema add(Cinema e)
+	public Cinema add(Cinema ci)
 	{
-		return dao.save(e);
+		return dao.save(ci);
 	}
 	
-	public Cinema update(Cinema e)
+	public Cinema update(Cinema ci)
 	{
-		return dao.save(e);
+		return dao.save(ci);
 	}
 	
 	public boolean delete(Long id)
