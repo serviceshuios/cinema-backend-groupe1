@@ -1,5 +1,6 @@
 package com.montparnasse.cinema.domaine;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -12,7 +13,7 @@ import javax.persistence.OneToMany;
 import org.springframework.data.annotation.Id;
 
 @Entity
-public class Place {
+public class Place implements Serializable {
 	
 	/*-----attributs-------------*/
 	@Id
