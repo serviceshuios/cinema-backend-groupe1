@@ -49,6 +49,18 @@ public class RestVilleController {
 	{
 		return service.add(v);
 	}
+
+	/*
+	@RequestMapping(value = "/inscription/{idVille}/{idCinema}", method = RequestMethod.PUT, produces = {MediaType.APPLICATION_JSON_VALUE})
+	@ResponseBody
+	public boolean updateVille(@PathVariable("idVille") Long idVille,
+			@PathVariable("idCinema") Long idCinema)
+	{
+		return service.ajouterVilleCinema(idVille, idCinema);
+	}
+	
+	*/
+
 	
 
 	
@@ -72,6 +84,7 @@ public class RestVilleController {
 //	
 
 	
+
 	/*
 	@RequestMapping(value = "/attribution/{idVille}", method = RequestMethod.PUT, produces = {MediaType.APPLICATION_JSON_VALUE})
 	@ResponseBody
