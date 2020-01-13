@@ -30,6 +30,7 @@ public class Salle {
 	joinColumns= @JoinColumn(name="FILM_ID"),
 	inverseJoinColumns=@JoinColumn(name="SALLE_ID")
 	)
+	private List<Film> listeFilms;
 	
 	@ManyToOne
 	private Cinema cinema;

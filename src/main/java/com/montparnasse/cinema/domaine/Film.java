@@ -28,8 +28,8 @@ public class Film {
 	@ManyToOne
 	private Categorie categorie;
 	
-	@ManyToMany(mappedBy="listeSalles")
-	private List<Film> listeFilms;
+	@ManyToMany(mappedBy="listeFilms")
+	private List<Salle> listeSalle;
 	
 	/*--------------constructeurs------------------*/
 	public Film() {
