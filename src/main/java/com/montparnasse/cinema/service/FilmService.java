@@ -15,14 +15,14 @@ public class FilmService {
 	@Autowired
 	private FilmDAO dao;
 	
-	public Film add(Film e)
+	public Film add(Film f)
 	{
-		return dao.save(e);
+		return dao.save(f);
 	}
 	
-	public Film update(Film e)
+	public Film update(Film f)
 	{
-		return dao.save(e);
+		return dao.save(f);
 	}
 	
 	public boolean delete(Long id)
