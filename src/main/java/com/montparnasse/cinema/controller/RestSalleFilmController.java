@@ -26,7 +26,7 @@ public class RestSalleFilmController {
 	
 	@RequestMapping(value = "/salles", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
 	@ResponseBody
-	public List<SalleFilm> getProjectionSalles()
+	public List<SalleFilm> getSalleFilms()
 	{
 		return service.getAll();
 	}
