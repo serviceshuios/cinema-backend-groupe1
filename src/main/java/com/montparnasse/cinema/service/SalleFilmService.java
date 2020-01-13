@@ -9,6 +9,7 @@ import com.montparnasse.cinema.dao.SalleDAO;
 import com.montparnasse.cinema.dao.SalleFilmDAO;
 import com.montparnasse.cinema.domaine.Salle;
 import com.montparnasse.cinema.domaine.SalleFilm;
+import com.montparnasse.cinema.domaine.SalleFilmId;
 
 @Service
 public class SalleFilmService {
@@ -26,13 +27,13 @@ public class SalleFilmService {
 		return dao.save(sf);
 	}
 	
-	public boolean delete(Long id)
+	public boolean delete(SalleFilmId id)
 	{
 		dao.deleteById(id);
 		return true;
 	}
 	
-	public SalleFilm get(Long id)
+	public SalleFilm get(SalleFilmId id)
 	{
 		return dao.findById(id).get();
 	}
