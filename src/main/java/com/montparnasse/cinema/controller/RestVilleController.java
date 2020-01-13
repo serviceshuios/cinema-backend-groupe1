@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.montparnasse.cinema.domaine.Ville;
 import com.montparnasse.cinema.service.VilleService;
 
 
@@ -49,6 +50,8 @@ public class RestVilleController {
 		return service.add(v);
 	}
 	
+	
+	/*
 	@RequestMapping(value = "/inscription/{idVille}/{idCinema}", method = RequestMethod.PUT, produces = {MediaType.APPLICATION_JSON_VALUE})
 	@ResponseBody
 	public boolean updateVille(@PathVariable("idVille") Long idVille,
@@ -56,7 +59,7 @@ public class RestVilleController {
 	{
 		return service.ajouterVilleCinema(idVille, idCinema);
 	}
-	
+	*/
 	
 	/*
 	@RequestMapping(value = "/attribution/{idVille}", method = RequestMethod.PUT, produces = {MediaType.APPLICATION_JSON_VALUE})
