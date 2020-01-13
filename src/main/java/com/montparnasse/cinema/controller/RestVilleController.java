@@ -62,8 +62,6 @@ public class RestVilleController {
 	*/
 
 	
-
-	
 	/*
 	@RequestMapping(value = "/inscription/{idVille}/{idCinema}", method = RequestMethod.PUT, produces = {MediaType.APPLICATION_JSON_VALUE})
 	@ResponseBody
