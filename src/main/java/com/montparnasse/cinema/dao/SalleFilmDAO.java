@@ -7,9 +7,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.montparnasse.cinema.domaine.Salle;
 import com.montparnasse.cinema.domaine.SalleFilm;
+import com.montparnasse.cinema.domaine.SalleFilmId;
 
 @Component
 @Repository
 @Transactional
-public interface SalleFilmDAO  extends JpaRepository<SalleFilm, Long>{
+public interface SalleFilmDAO  extends JpaRepository<SalleFilm, SalleFilmId>{
 }
