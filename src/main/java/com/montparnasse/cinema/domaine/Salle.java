@@ -1,22 +1,23 @@
 package com.montparnasse.cinema.domaine;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-import org.springframework.data.annotation.Id;
 
 
 @Entity
-public class Salle {
+public class Salle implements Serializable{
 
 	/*-----attributs-------------*/
 	@Id
@@ -25,7 +26,7 @@ public class Salle {
 	private String name;
 	private int nombrePlaces;
 	
-	@ManyToMany(cascade=CascadeType.ALL)
+	@ManyToMany(mappedBy = "listeSalle", cascade=CascadeType.ALL)
 	@JoinTable(name="film_assoc_salle",joinColumns= @JoinColumn(name="FILM_ID"),inverseJoinColumns=@JoinColumn(name="SALLE_ID"))
 	private List<Film> listeFilms;
 	

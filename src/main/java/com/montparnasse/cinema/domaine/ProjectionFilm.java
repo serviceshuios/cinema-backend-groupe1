@@ -1,5 +1,6 @@
 package com.montparnasse.cinema.domaine;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
@@ -14,7 +15,7 @@ import javax.persistence.OneToOne;
 import org.springframework.data.annotation.Id;
 
 @Entity
-public class ProjectionFilm {
+public class ProjectionFilm implements Serializable {
 	
 	/*-----attributs-------------*/
 	@Id
