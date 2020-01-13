@@ -12,14 +12,14 @@ public class VilleService {
 	@Autowired
 	private VilleDao dao;
 	
-	public Ville add(Ville e)
+	public Ville add(Ville v)
 	{
-		return dao.save(e);
+		return dao.save(v);
 	}
 	
-	public Ville update(Ville e)
+	public Ville update(Ville v)
 	{
-		return dao.save(e);
+		return dao.save(v);
 	}
 	
 	public boolean delete(Long id)
