@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 @Entity
 public class Cinema implements Serializable {
@@ -28,6 +30,7 @@ public class Cinema implements Serializable {
 	@ManyToOne
 	private Ville ville;
 	
+	@JsonIgnore
 	@OneToMany(mappedBy = "cinema",cascade = CascadeType.ALL)
 	private List<Salle> listeSalle;
 	

@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 
 @Entity
@@ -25,6 +27,7 @@ public class Ticket implements Serializable {
 	private int codePayement;
 	private boolean reservee;
 	
+	@JsonIgnore
 	@OneToMany(mappedBy = "ticket",cascade = CascadeType.ALL)
 	private List<Place> listePlaces;
 	

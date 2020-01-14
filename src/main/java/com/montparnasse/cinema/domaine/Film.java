@@ -12,6 +12,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 
 @Entity
@@ -31,6 +33,7 @@ public class Film implements Serializable {
 	@ManyToOne
 	private Categorie categorie;
 	
+	@JsonIgnore
 	@OneToMany(mappedBy="id.film")
 	private List<SalleFilm> salleFilm = new ArrayList<SalleFilm>();
 	

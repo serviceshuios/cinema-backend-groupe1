@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 @Entity
 public class Ville implements Serializable {
@@ -23,6 +25,7 @@ public class Ville implements Serializable {
 	private double latitude;
 	private double altitude;
 	
+	@JsonIgnore
 	@OneToMany(mappedBy = "ville",cascade = CascadeType.ALL)
 	private List<Cinema> listCinema;
 

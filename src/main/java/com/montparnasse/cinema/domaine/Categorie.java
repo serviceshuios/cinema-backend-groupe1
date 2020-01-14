@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 @Entity
 public class Categorie implements Serializable {
@@ -20,6 +22,7 @@ public class Categorie implements Serializable {
 	private Long id;
 	private String name;
 	
+	@JsonIgnore
 	@OneToMany(mappedBy = "categorie",cascade = CascadeType.ALL)
 	private List<Film> listFilm;
 	

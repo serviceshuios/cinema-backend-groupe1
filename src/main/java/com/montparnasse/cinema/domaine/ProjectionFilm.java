@@ -12,6 +12,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 @Entity
 public class ProjectionFilm implements Serializable {
@@ -23,6 +25,7 @@ public class ProjectionFilm implements Serializable {
 	private Date dateProjection;
 	private double prix;
 	
+	@JsonIgnore
 	@OneToMany(mappedBy = "projectionFilm",cascade = CascadeType.ALL)
 	private List<Ticket> listTicket;
 	
