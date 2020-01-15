@@ -23,7 +23,7 @@ public class RestProjectionFilmController {
 	@Autowired
 	private ProjectionFilmService service;
 	
-	@RequestMapping(value = "/projections", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
+	@RequestMapping(value = "/projectionfilms", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
 	@ResponseBody
 	public List<ProjectionFilm> getProjectionFilms()
 	{
@@ -32,7 +32,7 @@ public class RestProjectionFilmController {
 	
 
   
-  @RequestMapping(value = "/projections/{id}", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
+  @RequestMapping(value = "/projectionfilms/{id}", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
 	@ResponseBody
 	public ProjectionFilm getProjectionFilm(@PathVariable("id") Long id)
 	{
@@ -42,7 +42,7 @@ public class RestProjectionFilmController {
 	
 	
 
-	@RequestMapping(value = "/projections", method = RequestMethod.POST, produces = {MediaType.APPLICATION_JSON_VALUE})
+	@RequestMapping(value = "/projectionfilms", method = RequestMethod.POST, produces = {MediaType.APPLICATION_JSON_VALUE})
 	@ResponseBody
 	public ProjectionFilm addProjectionFilm(@RequestBody ProjectionFilm pf)
 	{
@@ -50,14 +50,14 @@ public class RestProjectionFilmController {
 	}
 	
 	
-	@RequestMapping(value = "/projections", method = RequestMethod.PUT, produces = {MediaType.APPLICATION_JSON_VALUE})
+	@RequestMapping(value = "/projectionfilms", method = RequestMethod.PUT, produces = {MediaType.APPLICATION_JSON_VALUE})
 	@ResponseBody
 	public ProjectionFilm updateProjectionFilm(@RequestBody ProjectionFilm pf)
 	{
 		return service.update(pf);
 	}
 	
-	@RequestMapping(value = "/projections/{id}", method = RequestMethod.DELETE, produces = {MediaType.APPLICATION_JSON_VALUE})
+	@RequestMapping(value = "/projectionfilms/{id}", method = RequestMethod.DELETE, produces = {MediaType.APPLICATION_JSON_VALUE})
 	@ResponseBody
 	public boolean deleteProjectionFilm(@PathVariable("id") Long id)
 	{
