@@ -23,7 +23,6 @@ public class Seance implements Serializable {
 	private Long id;
 	private Date heureDebut;
 	
-	@JsonIgnore
 	@OneToOne(mappedBy="seance", cascade=CascadeType.ALL)
 	private ProjectionFilm projectionFilm;
 
