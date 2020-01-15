@@ -98,6 +98,27 @@ public class Place implements Serializable {
 		this.altitude = altitude;
 	}
 
+	
+
+	public Ticket getTicket() {
+		return ticket;
+	}
+
+
+	public void setTicket(Ticket ticket) {
+		this.ticket = ticket;
+	}
+
+
+	public Salle getSalle() {
+		return salle;
+	}
+
+
+	public void setSalle(Salle salle) {
+		this.salle = salle;
+	}
+
 
 	@Override
 	public String toString() {

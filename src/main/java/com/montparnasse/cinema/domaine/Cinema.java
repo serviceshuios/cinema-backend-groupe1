@@ -110,6 +110,27 @@ public Cinema() {
 		this.nombreSalles = nombreSalles;
 	}
 
+	
+
+	public Ville getVille() {
+		return ville;
+	}
+
+
+	public void setVille(Ville ville) {
+		this.ville = ville;
+	}
+
+
+	public List<Salle> getListeSalle() {
+		return listeSalle;
+	}
+
+
+	public void setListeSalle(List<Salle> listeSalle) {
+		this.listeSalle = listeSalle;
+	}
+
 
 	@Override
 	public String toString() {

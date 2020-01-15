@@ -94,6 +94,17 @@ public class Ville implements Serializable {
 		this.altitude = altitude;
 	}
 
+	
+
+	public List<Cinema> getListCinema() {
+		return listCinema;
+	}
+
+
+	public void setListCinema(List<Cinema> listCinema) {
+		this.listCinema = listCinema;
+	}
+
 
 	@Override
 	public String toString() {

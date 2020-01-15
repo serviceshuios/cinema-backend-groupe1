@@ -111,6 +111,16 @@ public class Film implements Serializable {
 	public void setDateSortie(Date dateSortie) {
 		this.dateSortie = dateSortie;
 	}
+	
+	
+
+	public Categorie getCategorie() {
+		return categorie;
+	}
+
+	public void setCategorie(Categorie categorie) {
+		this.categorie = categorie;
+	}
 
 	@Override
 	public String toString() {

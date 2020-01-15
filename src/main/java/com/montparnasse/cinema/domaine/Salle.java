@@ -86,6 +86,27 @@ public class Salle implements Serializable{
 		this.nombrePlaces = nombrePlaces;
 	}
 
+	
+
+	public Cinema getCinema() {
+		return cinema;
+	}
+
+
+	public void setCinema(Cinema cinema) {
+		this.cinema = cinema;
+	}
+
+
+	public List<Place> getListPlace() {
+		return listPlace;
+	}
+
+
+	public void setListPlace(List<Place> listPlace) {
+		this.listPlace = listPlace;
+	}
+
 
 	@Override
 	public String toString() {

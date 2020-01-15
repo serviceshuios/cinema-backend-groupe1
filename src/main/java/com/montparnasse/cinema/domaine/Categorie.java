@@ -53,6 +53,16 @@ public class Categorie implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	
+
+	public List<Film> getListFilm() {
+		return listFilm;
+	}
+
+	public void setListFilm(List<Film> listFilm) {
+		this.listFilm = listFilm;
+	}
 
 	@Override
 	public String toString() {

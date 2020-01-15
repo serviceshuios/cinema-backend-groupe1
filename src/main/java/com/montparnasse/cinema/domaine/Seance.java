@@ -51,6 +51,16 @@ public class Seance implements Serializable {
 		this.heureDebut = heureDebut;
 	}
 
+	
+	
+	public ProjectionFilm getProjectionFilm() {
+		return projectionFilm;
+	}
+
+	public void setProjectionFilm(ProjectionFilm projectionFilm) {
+		this.projectionFilm = projectionFilm;
+	}
+
 	@Override
 	public String toString() {
 		return "Seance [id=" + id + ", heureDebut=" + heureDebut + "]";

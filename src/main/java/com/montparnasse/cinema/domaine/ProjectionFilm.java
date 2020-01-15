@@ -91,6 +91,47 @@ public ProjectionFilm() {
 		this.prix = prix;
 	}
 
+	
+
+	public Salle getSalle() {
+		return salle;
+	}
+
+
+	public void setSalle(Salle salle) {
+		this.salle = salle;
+	}
+
+
+	public Film getFilm() {
+		return film;
+	}
+
+
+	public void setFilm(Film film) {
+		this.film = film;
+	}
+
+
+	public List<Ticket> getListTicket() {
+		return listTicket;
+	}
+
+
+	public void setListTicket(List<Ticket> listTicket) {
+		this.listTicket = listTicket;
+	}
+
+
+	public Seance getSeance() {
+		return seance;
+	}
+
+
+	public void setSeance(Seance seance) {
+		this.seance = seance;
+	}
+
 
 	@Override
 	public String toString() {

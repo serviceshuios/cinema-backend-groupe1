@@ -100,6 +100,27 @@ public Ticket() {
 		this.reservee = reservee;
 	}
 
+	
+
+	public List<Place> getListePlaces() {
+		return listePlaces;
+	}
+
+
+	public void setListePlaces(List<Place> listePlaces) {
+		this.listePlaces = listePlaces;
+	}
+
+
+	public ProjectionFilm getProjectionFilm() {
+		return projectionFilm;
+	}
+
+
+	public void setProjectionFilm(ProjectionFilm projectionFilm) {
+		this.projectionFilm = projectionFilm;
+	}
+
 
 	@Override
 	public String toString() {
