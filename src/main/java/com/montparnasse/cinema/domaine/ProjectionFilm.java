@@ -32,10 +32,12 @@ public class ProjectionFilm implements Serializable {
 	private Date dateProjection;
 	private double prix;
 	
+	@JsonIgnore
 	@ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "Salle_Id", nullable = false)
     private Salle salle;
  
+	@JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "Film_Id", nullable = false)
     private Film film;
