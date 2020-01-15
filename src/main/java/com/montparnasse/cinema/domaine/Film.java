@@ -5,24 +5,32 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 
 @Entity
+@Table(name = "Film", //
+uniqueConstraints = { //
+        @UniqueConstraint(name = "FILM", columnNames = "Film_Titre") })
 public class Film implements Serializable {
 
 	/*-----attributs-------------*/
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "Film_Id", nullable = false)
 	private Long id;
+	@Column(name = "Film_Titre", nullable = false)
 	private String titre;
 	private double duree;
 	private String realisation;
@@ -32,10 +40,6 @@ public class Film implements Serializable {
 	
 	@ManyToOne
 	private Categorie categorie;
-	
-	@JsonIgnore
-	@OneToMany(mappedBy="id.film")
-	private List<SalleFilm> salleFilm = new ArrayList<SalleFilm>();
 	
 	/*--------------constructeurs------------------*/
 	public Film() {
