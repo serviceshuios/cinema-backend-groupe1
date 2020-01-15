@@ -28,7 +28,7 @@ public class Ticket implements Serializable {
 	private boolean reservee;
 	
 	@JsonIgnore
-	@OneToMany(mappedBy = "ticket",cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "ticket")
 	private List<Place> listePlaces;
 	
 	@ManyToOne

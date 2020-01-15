@@ -44,7 +44,6 @@ public class ProjectionFilm implements Serializable {
 	@OneToMany(mappedBy = "projectionFilm",cascade = CascadeType.ALL)
 	private List<Ticket> listTicket;
 	
-	@JsonIgnore
 	@OneToOne(cascade=CascadeType.ALL)
 	private Seance seance;
 	
