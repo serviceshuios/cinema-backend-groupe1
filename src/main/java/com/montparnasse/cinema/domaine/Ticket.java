@@ -27,9 +27,8 @@ public class Ticket implements Serializable {
 	private int codePayement;
 	private boolean reservee;
 	
-	@JsonIgnore
-	@OneToMany(mappedBy = "ticket")
-	private List<Place> listePlaces;
+	@ManyToOne
+	private Place place;
 	
 	@ManyToOne
 	private ProjectionFilm projectionFilm;
@@ -100,15 +99,13 @@ public Ticket() {
 		this.reservee = reservee;
 	}
 
-	
-
-	public List<Place> getListePlaces() {
-		return listePlaces;
+	public Place getPlace() {
+		return place;
 	}
 
 
-	public void setListePlaces(List<Place> listePlaces) {
-		this.listePlaces = listePlaces;
+	public void setPlace(Place place) {
+		this.place = place;
 	}
 
 

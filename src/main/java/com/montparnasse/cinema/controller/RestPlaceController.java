@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.montparnasse.cinema.domaine.Film;
 import com.montparnasse.cinema.domaine.Place;
+import com.montparnasse.cinema.domaine.Ticket;
 import com.montparnasse.cinema.service.FilmService;
 import com.montparnasse.cinema.service.PlaceService;
 
@@ -40,7 +41,12 @@ public class RestPlaceController {
 		return service.get(id);
 	}
 	
-	
+  @RequestMapping(value = "/places/{id}", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
+	@ResponseBody
+	public List<Ticket> getPlaceTickets(@PathVariable("id") Long id)
+	{
+		return service.get(id).getListTickets();
+	}
 	
 
 	@RequestMapping(value = "/places", method = RequestMethod.POST, produces = {MediaType.APPLICATION_JSON_VALUE})

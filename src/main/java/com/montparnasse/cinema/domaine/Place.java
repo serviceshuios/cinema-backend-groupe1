@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 
 @Entity
@@ -25,8 +27,9 @@ public class Place implements Serializable {
 	private double latitude;
 	private double altitude;
 	
-	@ManyToOne
-	private Ticket ticket;
+	@JsonIgnore
+	@OneToMany(mappedBy = "place")
+	private List<Ticket> listTickets;
 	
 	@ManyToOne
 	private Salle salle;
@@ -98,15 +101,12 @@ public class Place implements Serializable {
 		this.altitude = altitude;
 	}
 
-	
-
-	public Ticket getTicket() {
-		return ticket;
+	public List<Ticket> getListTickets() {
+		return listTickets;
 	}
 
-
-	public void setTicket(Ticket ticket) {
-		this.ticket = ticket;
+	public void setListTickets(List<Ticket> listTickets) {
+		this.listTickets = listTickets;
 	}
 
 

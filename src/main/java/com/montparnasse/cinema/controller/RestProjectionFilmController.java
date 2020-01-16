@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.montparnasse.cinema.domaine.ProjectionFilm;
+import com.montparnasse.cinema.domaine.Ticket;
 import com.montparnasse.cinema.service.ProjectionFilmService;
 
 
@@ -40,7 +41,12 @@ public class RestProjectionFilmController {
 	}
 	
 	
-	
+  @RequestMapping(value = "/projectionfilms/{id}/tickets", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
+	@ResponseBody
+	public List<Ticket> getProjectionFilmTickets(@PathVariable("id") Long id)
+	{
+		return service.get(id).getListTicket();
+	}
 
 	@RequestMapping(value = "/projectionfilms", method = RequestMethod.POST, produces = {MediaType.APPLICATION_JSON_VALUE})
 	@ResponseBody

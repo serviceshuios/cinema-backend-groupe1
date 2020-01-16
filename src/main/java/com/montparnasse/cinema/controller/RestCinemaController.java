@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import com.montparnasse.cinema.domaine.Cinema;
-
+import com.montparnasse.cinema.domaine.Salle;
 import com.montparnasse.cinema.service.CinemaService;
 
 @CrossOrigin("*")
@@ -40,7 +40,12 @@ public class RestCinemaController {
 		return service.get(id);
 	}
 	
-	
+  @RequestMapping(value = "/cinemas/{id}/salles", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
+	@ResponseBody
+	public List<Salle> getCinemaSalles(@PathVariable("id") Long id)
+	{
+		return service.get(id).getListeSalle();
+	}
 	
 
 	@RequestMapping(value = "/cinemas", method = RequestMethod.POST, produces = {MediaType.APPLICATION_JSON_VALUE})
