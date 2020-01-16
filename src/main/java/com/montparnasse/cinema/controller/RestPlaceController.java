@@ -41,7 +41,7 @@ public class RestPlaceController {
 		return service.get(id);
 	}
 	
-  @RequestMapping(value = "/places/{id}", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
+  @RequestMapping(value = "/places/{id}/tickets", method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
 	@ResponseBody
 	public List<Ticket> getPlaceTickets(@PathVariable("id") Long id)
 	{
