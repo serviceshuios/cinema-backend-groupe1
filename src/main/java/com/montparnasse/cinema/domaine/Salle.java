@@ -43,6 +43,10 @@ public class Salle implements Serializable{
 	@JsonIgnore
 	@OneToMany(mappedBy = "salle",cascade = CascadeType.ALL)
 	private List<Place> listPlace;
+	
+	@JsonIgnore
+	@OneToMany(mappedBy = "salle",cascade = CascadeType.ALL)
+	private List<ProjectionFilm> listProjectionFilm;
 
 	/*-----------constructeurs-------------------*/
 	
@@ -105,6 +109,17 @@ public class Salle implements Serializable{
 
 	public void setListPlace(List<Place> listPlace) {
 		this.listPlace = listPlace;
+	}
+
+	
+
+	public List<ProjectionFilm> getListProjectionFilm() {
+		return listProjectionFilm;
+	}
+
+
+	public void setListProjectionFilm(List<ProjectionFilm> listProjectionFilm) {
+		this.listProjectionFilm = listProjectionFilm;
 	}
 
 

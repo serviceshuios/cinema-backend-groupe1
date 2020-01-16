@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -40,6 +41,10 @@ public class Film implements Serializable {
 	
 	@ManyToOne
 	private Categorie categorie;
+	
+	@JsonIgnore
+	@OneToMany(mappedBy = "film",cascade = CascadeType.ALL)
+	private List<ProjectionFilm> listProjectionFilm;
 	
 	/*--------------constructeurs------------------*/
 	public Film() {
@@ -120,6 +125,14 @@ public class Film implements Serializable {
 
 	public void setCategorie(Categorie categorie) {
 		this.categorie = categorie;
+	}
+
+	public List<ProjectionFilm> getListProjectionFilm() {
+		return listProjectionFilm;
+	}
+
+	public void setListProjectionFilm(List<ProjectionFilm> listProjectionFilm) {
+		this.listProjectionFilm = listProjectionFilm;
 	}
 
 	@Override
